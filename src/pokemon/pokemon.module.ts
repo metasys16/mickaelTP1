@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { PokemonsController } from './pokemons.controller';
-import { PokemonsService } from './pokemons.service';
+import { PokemonController } from './pokemon.controller';
+import { PokemonService } from './pokemon.service';
 import { Pokemon, PokemonSchema } from './schemas/pokemon.schema';
 
 @Module({
   imports: [MongooseModule.forFeature([{ name: Pokemon.name, schema: PokemonSchema }])],
-  controllers: [PokemonsController],
-  providers: [PokemonsService],
+  controllers: [PokemonController],
+  providers: [PokemonService],
 })
-export class PokemonsModule {}
+export class PokemonModule {}
